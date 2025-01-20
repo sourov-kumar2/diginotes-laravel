@@ -169,7 +169,7 @@
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               
+
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                 <img class="img-profile rounded-circle"
                     src="img/undraw_profile.svg">
@@ -190,18 +190,13 @@
                     Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                    <form method="POST" action="{{ route('admin.logout') }}">
-                        @csrf
-
-                        <x-responsive-nav-link :href="route('admin.logout')"
-                                onclick="event.preventDefault();
-                                            this.closest('form').submit();">
-                            {{ __('Log Out') }}
-                        </x-responsive-nav-link>
-                    </form>
-                </a>
+                <form method="POST" action="{{ route('logout') }}" class="dropdown-item">
+                    @csrf
+                    <button type="submit" class="btn btn-link">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        {{ __('Log Out') }}
+                    </button>
+                </form>
 
             </div>
         </li>

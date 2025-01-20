@@ -34,7 +34,7 @@ class Logincontroller extends Controller
             return redirect()->route('admin.dashboard')->with('success', 'Login successful!');
         } catch (\Exception $e) {
             Log::error('Login failed: ' . $e->getMessage());
-            dd($e->getMessage());
+           
             return redirect()->route('admin.login')->with('error', 'Login failed! Please check your credentials and try again.');
         }
     }
