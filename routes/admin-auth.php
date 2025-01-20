@@ -12,10 +12,9 @@ Route::prefix('admin')->middleware('guest:admin')->group(function () {
 
     Route::post('register', [RegisteredUserController::class, 'store']);
 
-    Route::get('login', [Logincontroller::class, 'create'])
-                ->name('admin.login');
+    Route::get('login', [Logincontroller::class, 'create']);
 
-    Route::post('login', [Logincontroller::class, 'store']);
+    Route::post('login', [Logincontroller::class, 'store']) ->name('admin.login');
 ;
 });
 

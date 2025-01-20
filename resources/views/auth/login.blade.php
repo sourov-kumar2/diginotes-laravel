@@ -5,6 +5,9 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
+        <!-- Hidden Input for User Type -->
+        <input type="hidden" name="user_type" value="user">
+
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
