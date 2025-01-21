@@ -30,8 +30,8 @@
         <div id="collapseNotes" class="collapse" aria-labelledby="headingNotes" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Notes Management:</h6>
-                <a class="collapse-item" href="add-note.html">Add Note</a>
-                <a class="collapse-item" href="manage-notes.html">Manage Notes</a>
+                <a class="collapse-item" href="{{route('notes.add')}}">Add Note</a>
+                <a class="collapse-item" href="{{route('notes.manage')}}">Manage Notes</a>
             </div>
         </div>
     </li>
@@ -44,8 +44,8 @@
         <div id="collapseCategories" class="collapse" aria-labelledby="headingCategories" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Categories Management:</h6>
-                <a class="collapse-item" href="add-category.html">Add Category</a>
-                <a class="collapse-item" href="manage-categories.html">Manage Categories</a>
+                <a class="collapse-item" href="{{route('category.add')}}">Add Category</a>
+                <a class="collapse-item" href="{{route('category.manage')}}">Manage Categories</a>
             </div>
         </div>
     </li>
